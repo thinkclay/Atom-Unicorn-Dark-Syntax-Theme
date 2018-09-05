@@ -1,7 +1,7 @@
 @import "syntax-variables";
 
 atom-text-editor {
-  background-color: @syntax-background-color;
+  background-color: @dark;
   color: @syntax-text-color;
 
   .wrap-guide {
@@ -9,7 +9,7 @@ atom-text-editor {
   }
 
   .indent-guide {
-    color: lighten(@dark, 10%);
+    color: darken(@dark, 3%);
   }
 
   .invisible-character {
@@ -56,7 +56,7 @@ atom-text-editor {
 // Syntax styles
 
 .syntax--comment {
-  color: @light;
+  color: @syntax-comment;
 }
 
 .syntax--keyword {
@@ -80,7 +80,7 @@ atom-text-editor {
 }
 
 .syntax--storage {
-  color: @purple;
+  color: @syntax-storage;
 }
 
 .syntax--constant {
@@ -91,7 +91,7 @@ atom-text-editor {
   }
 
   &.syntax--numeric {
-    color: @orange;
+    color: @yellow;
   }
 
   &.syntax--other.syntax--color {
@@ -117,12 +117,11 @@ atom-text-editor {
 
 .syntax--invalid.syntax--illegal {
   background-color: @red;
-  color: @syntax-background-color;
+  color: darken(@red, 50%);
 }
 
 .syntax--string {
-  color: @green;
-
+  color: @light;
 
   &.syntax--regexp {
     color: @blue;
@@ -140,7 +139,7 @@ atom-text-editor {
 .syntax--punctuation {
   &.syntax--definition {
     &.syntax--comment {
-      color: @light;
+      color: @syntax-comment;
     }
 
     &.syntax--string,
@@ -156,7 +155,7 @@ atom-text-editor {
     }
 
     &.syntax--bold {
-      color: @light-orange;
+      color: @orange;
       font-weight: bold;
     }
 
@@ -174,7 +173,7 @@ atom-text-editor {
 
 .syntax--support {
   &.syntax--class {
-    color: @light-orange;
+    color: @orange;
   }
 
   &.syntax--function  {
@@ -191,7 +190,7 @@ atom-text-editor {
     color: @blue;
   }
   &.syntax--name.syntax--type {
-    color: @light-orange;
+    color: @orange;
     text-decoration: underline;
   }
 
@@ -199,7 +198,7 @@ atom-text-editor {
     color: @green;
   }
   &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
-    color: @light-orange;
+    color: @orange;
   }
 
   &.syntax--name.syntax--section {
@@ -222,7 +221,7 @@ atom-text-editor {
 
 .syntax--meta {
   &.syntax--class {
-    color: @light-orange;
+    color: @orange;
   }
 
   &.syntax--link {
@@ -238,7 +237,6 @@ atom-text-editor {
   }
 
   &.syntax--separator {
-    background-color: @gray;
     color: @syntax-text-color;
   }
 }
